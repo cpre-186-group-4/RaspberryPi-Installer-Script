@@ -95,4 +95,6 @@ echo "Installing Git"
 sudo apt-get install git
 echo "Grab code from repository"
 git clone https://github.com/cpre-186-group-4/Scanner
+git clone https://github.com/ozzmaker/BerryIMU
+git clone 
 echo "Files have been retrieved. TODO build me!"
