@@ -12,7 +12,7 @@ Run the command `sudo raspi-config`.
 Under `Advanced Options` is the `Expand Filesystem` option. Use this to ensure that all space on the SD card can 
 be used.
 #### Enable peripherals
-From the main menu, go to the `Interfacing Options` tab. Here you need to enable the __Camera__, __SSH__, and __SPI__
+From the main menu, go to the `Interfacing Options` tab. Here you need to enable the __Camera__, __SSH__, and __I2C__
 interfaces. Please note that if SSH is enabled on a public network, people _will_ atttempt to hack it, so please 
 change the Pi's password with the command `sudo passwd`
 ### 3.) Updates
@@ -27,5 +27,16 @@ command `sudo apt-get install git`.
 ### 5.) Download and run the installer script
 1. Clone the [Installer Script repository](https://github.com/cpre-186-group-4/RaspberryPi-Installer-Script) with the command `git clone https://github.com/cpre-186-group-4/RaspberryPi-Installer-Script.git`
   * It is also possible to download the script with `wget https://github.com/cpre-186-group-4/RaspberryPi-Installer-Script/blob/master/install.sh`
-2. Make the file executable with the command `chmod +x instal.sh`
+2. Make the file executable with the command `chmod +x install.sh`
 3. Run the program with `./install.sh`
+
+To recap, these are all the commands that need to be done:
+```shell
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install git
+git clone https://github.com/cpre-186-group-4/RaspberryPi-Installer-Script.git
+cd RaspberryPi-Installer-Script
+chmod +x install.sh
+./install.sh
+```
