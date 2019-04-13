@@ -26,5 +26,6 @@ One way to get the latest version of the installer script is to use Git. Install
 command `sudo apt-get install git`.
 ### 5.) Download and run the installer script
 1. Clone the [Installer Script repository](https://github.com/cpre-186-group-4/RaspberryPi-Installer-Script) with the command `git clone https://github.com/cpre-186-group-4/RaspberryPi-Installer-Script.git`
+  * It is also possible to download the script with `wget https://github.com/cpre-186-group-4/RaspberryPi-Installer-Script/blob/master/install.sh`
 2. Make the file executable with the command `chmod +x instal.sh`
 3. Run the program with `./install.sh`
