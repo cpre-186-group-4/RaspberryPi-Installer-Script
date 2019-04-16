@@ -6,6 +6,8 @@ cd
 echo "Seting up I2C"
 sudo apt-get update
 sudo apt-get install -y i2c-tools libi2c-dev  
+sudo apt-get install -y python3 python3-pip
+sudo apt-get install -y python3-picamera python-picamera
 sudo adduser pi i2c
 
 echo "Done setting up I2C. Here are the devices found"
