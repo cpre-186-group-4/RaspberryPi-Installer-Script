@@ -13,7 +13,7 @@ Under `Advanced Options` is the `Expand Filesystem` option. Use this to ensure t
 be used.
 #### Enable Peripherals
 From the main menu, go to the `Interfacing Options` tab. Here you need to enable the __Camera__, __SSH__, and __I2C__
-interfaces. Please note that if SSH is enabled on a public network, people _will_ atttempt to hack it, so please 
+interfaces. Please note that if SSH is enabled when your Pi is connected to a public network, people _will_ attempt to log into your Pi and _won't_ always do so with the best intentions. This has been a concern since [April 2012](https://www.raspberrypi.org/blog/updated-debian-arch-linux-arm-images/) when SSH was disabled by default. 
 change the Pi's password with the command `sudo passwd`
 ### 3.) Updates
 Update existing softare in this Raspbian distribution with the following commands
