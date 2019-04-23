@@ -6,13 +6,21 @@ cd
 echo "Seting up I2C"
 sudo apt-get update
 sudo apt-get install -y i2c-tools libi2c-dev  
-sudo apt-get install -y python3 python3-pip
-sudo apt-get install -y python3-picamera python-picamera
 sudo adduser pi i2c
+
+echo "Installing Python 3"
+sudo apt-get install -y python3 python3-pip
+
+echo "Installing PiCamera Python libraries"
+sudo apt-get install -y python3-picamera python-picamera
 
 echo "Done setting up I2C. Here are the devices found"
 i2cdetect -y 1
 
+echo "Installing packages for Python development with BerryIMU"
+sudo apt-get install -y python-smbus python3-smbus python-dev python3-dev
+
+echo "Getting source code for IMU libraries and the scanner software"
 git clone https://github.com/cpre-186-group-4/Scanner.git
 git clone https://github.com/ozzmaker/BerryIMU.git
 
@@ -29,5 +37,9 @@ gcc -o gyro_accelerometer_tutorial01 -l rt gyro_accelerometer_tutorial01.c -lm
 cd ../gyro_accelerometer_tutorial03_kalman_filter/
 gcc -o gyro_accelerometer_tutorial03 -l rt gyro_accelerometer_tutorial03.c -lm
 
-echo "Installing packages for Python development with BerryIMU"
-sudo apt-get install -y python-smbus python3-smbus python-dev python3-dev
+echo "Enabling SSH"
+sudo systemctl enable ssh
+sudo systemctl start ssh
+
+echo "SSH enabled. Connect via SSH or SFTP to the Pi's address: "
+hostname -I
