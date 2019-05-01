@@ -42,7 +42,7 @@ chmod +x install.sh
 #### Git Alternative: [Wget](https://www.gnu.org/software/wget/)
 Although Git makes version control easy, there are probably some cases where one may not want to install Git. Instead, use the following commands, which are all built into Raspbian:
 ```bash
-wget https://github.com/cpre-186-group-4/RaspberryPi-Installer-Script/blob/master/install.sh
+wget https://raw.githubusercontent.com/cpre-186-group-4/RaspberryPi-Installer-Script/master/install.sh
 chmod +x install.sh
 ./install.sh
 ```
